@@ -523,6 +523,8 @@ label treehouse:
 
         s "That's the spirit! Now, let's get back to visiting our hangout places!"
 
+        stop music
+
 
         if obscurity_stat < clarity_stat:
             jump abandoned_library
@@ -537,6 +539,7 @@ label abandoned_library:
     scene abandonedlibrary:
         fit "fill"
         xysize (1920, 1080)
+    play music "初夏の風を感じて…..mp3" volume 0.5 loop
     "The Abandoned Library"
     show shirosurprised with dissolve
     s "Oh wow the library didn't change that much. I guess people really are scared of it."
@@ -632,6 +635,20 @@ label abandoned_library:
         hide shironeutral with None
         s "Of course, Kuro. I'll support you no matter what you decide."
 
+        s "So, what do you say we do next?"
+        show shirosmile3 with dissolve
+        hide shirosmile2 with None
+
+        k "Hmm. I'm not sure what to do next."
+
+        s "You know, revisiting our old hangout spots might inspire us for you. What do you think?"
+        show shirolaugh with dissolve
+        hide shirosmile3 with None
+
+        k "Up to you."
+
+        s "Okay then. Let's go!"
+
         if obscurity_stat < clarity_stat:
             jump starry_night
         if clarity_stat < obscurity_stat:
@@ -659,6 +676,22 @@ label abandoned_library:
         hide shirolaugh with None
         s "That's amazing, Kuro! I believe you can do it. Your stories have always had a special magic to them."
         k "Thank you, Shiro. Your support means everything to me."
+        show shirosmile2 with dissolve
+        hide shirosurprised with None
+
+        s "So, what do you say we do next?"
+        show shirosmile3 with dissolve
+        hide shirosmile2 with None
+
+        k "Hmm. I'm not sure what to do next."
+
+        s "You know, revisiting our old hangout spots might inspire us for your stories. What do you think?"
+        show shirolaugh with dissolve
+        hide shirosmile3 with None
+
+        k "Sure."
+
+        s "Okay then. Let's go!"
         stop music
         if obscurity_stat < clarity_stat:
             jump starry_night
@@ -672,6 +705,7 @@ label secret_hideout:
     scene secrethideoutexterior:
         fit "fill"
         xysize (1920, 1080)
+    play music "初夏の風を感じて…..mp3" volume 0.5 loop
     "The Secret Hideout"
     show shirolaugh with dissolve
     s "Ah, it feels good to be back here."
@@ -810,7 +844,7 @@ label secret_hideout:
 
 
 
-#Chapter 4a: Starry Night - Good Ending
+#Chapter 4: Starry Night - Good Ending
 label starry_night:
     scene beach1:
         fit "fill"
@@ -913,7 +947,7 @@ label starry_night:
 
     jump good_game_end
 
-#Chapter 4b: Beach - Bad Ending
+#Chapter 4: Beach - Bad Ending
 label beach:
     scene beach2:
         fit "fill"
