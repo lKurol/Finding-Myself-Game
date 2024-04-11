@@ -539,7 +539,7 @@ label abandoned_library:
     scene abandonedlibrary:
         fit "fill"
         xysize (1920, 1080)
-    play music "初夏の風を感じて…..mp3" volume 0.5 loop
+    play music "初夏の風を感じて.mp3" volume 0.4 loop
     "The Abandoned Library"
     show shirosurprised with dissolve
     s "Oh wow the library didn't change that much. I guess people really are scared of it."
@@ -705,7 +705,7 @@ label secret_hideout:
     scene secrethideoutexterior:
         fit "fill"
         xysize (1920, 1080)
-    play music "初夏の風を感じて…..mp3" volume 0.5 loop
+    play music "初夏の風を感じて.mp3" volume 0.5 loop
     "The Secret Hideout"
     show shirolaugh with dissolve
     s "Ah, it feels good to be back here."
@@ -852,7 +852,7 @@ label starry_night:
     with fade
 
     play sound "night.mp3" volume 0.1 loop
-    play music "poemoftheclouds.mp3" volume 0.5 loop
+    play music "poemoftheclouds.mp3" volume 0.4 loop
 
     "The Starry Night"
     k "Shiro, it's a beautiful night, isn't it?"
