@@ -94,26 +94,75 @@ label start:
     That's all. Have a good evening!
     """
 
-    play sound "classroomnoise.mp3" volume 0.1 loop
+    play sound "classroomnoise.mp3" volume 0.2 loop
     "The students immediately begin packing up their things, eager to leave."
     scene classroomevening
+    show kurtsad at left with dissolve
+
     kt "Ugh, more homework. I swear, this teacher never lets us have a break."
+    hide kurtsad with None
+    show kurtsad at left
+    show jerubsad at center with dissolve
+
     j "Can't even play League with you guys after dismissal ;;"
+    show engelangry2 at right
+
     e "I know right! What if we ditch that assignment. What's your midterm grade again Kurt?"
+    hide kurtsad with None
+    show kurtnormal at left
+
     kt "Uhm, 85"
+    hide engelangry2 with None
+    show engelnormal at right
+
     e "How about you Jerub?"
+    hide jerubsad with None
+    show jerubnormal at center
+
     j "90"
+    hide engelnormal with None
+    show engelsmile3 at right
+
     e "Damn son! We all got passing grades for midterms anyway, so I'm thinking... what if we don't do the homework?"
+    hide jerubnormal with None
+    show jerubangry2 at center
+
     j "Are you crazy?"
+    hide kurtnormal with None
+    show kurtsmirk at left
+
     kt "I mean. He's got a point. I'm in."
+    hide engelsmile3 with None
+    show engelsmile2 at right
+
     e "What about you Jerub?"
+    hide jerubangry2 with None
+    show jerubsad at center
+
     j "But the homework."
+    hide engelsmile2 with None
+    show engelsmile3 at right
+
     e "C'mon we're only going to do this once. Let's go! Let's play, how are we gonna rank up without you?"
-    kt "Yeah, we rack up wins when you're in the team! We'll get in Diamond rank in no time!"
-    j "Sure but...(it'll be hard for me to carry them ;; and it's not gonna be worth it if we lose again.)"
+    hide kurtsmirk with None
+    show kurtsmile3 at left
+
+    kt "Yeah, we rack up wins when you're in the team."
+    hide jerubsad with None
+    show jerubangry2 at center
+
+    j "Sure but..."
+    hide jerubangry2 with None
+    show jerubsmile3 at center
+
     j "(Oh yeah there's Kuro! Game's gonna be so much easier when he's on our team)"
+    hide jerubsmile3 with None
+    show jerubangry2 at center
+
     j "Oiiiiiiiiiii! Kuro! You coming with us right?"
+
     "I looked at Jerub with a tired face"
+
 
     scene classroomevening3
     j "So are you coming?"
@@ -127,52 +176,131 @@ label start:
 
 
 label go_with_them:
+    show kurtsmile3 at left
+    show jerubangry2 at center
+    show engelsmile3 at right
     k "Sure I want to go with you guys but isn't it a bit late for that?"
+    show engelnormal at right
+    hide engelsmile3 with None
     e "A bit late?"
+    show engelangry2 at right
+    hide engelnormal with None
+
     e "What are you talking about? It's still 5:00 pm bro"
+    show jerubnormal at center
+    hide jerubangry2 with None
     j "Now that you mention it isn't Kurt's mom gonna call him again if he plays with us this late?"
+    show kurtnormal at left
+    hide kurtsmile3 with None
+
     kt "Uhm...no"
     j "Remember the last time your mom picked you up while we're playing back then?"
+    show kurtsad at left
+    hide kurtnormal with None
+
     kt "Let's...not talk about that."
+    show engelnormal at right
+    hide engelangry2 with None
     e "Hey c'mon Jerub give Kurt a break."
     e "Surely this time his mom won't come and pick him up. Right Kurt?"
+    show kurtsmile1 at left
+    hide kurtsad with None
+
     kt "Yeah"
+    show jerubnormal at center
+
     j "I don't know about that one bro. What if his mom picks him up again?"
-    e "Let's just hope his mom doesn't come xD."
+    show engelsmile3 at right
+    hide engelnormal with None
+    e "Let's just hope his mom doesn't come."
+    show jerubsad at center
+    hide jerubnormal with None
+
     j "Are you guys sure about this?"
+    show kurtsmile3 at left
+    hide kurtsmile1 with None
+
     kt "Yeah, I just want to play with you guys."
+    show jerubnormal at center
+    hide jerubsad with None
     j "... fine then."
     k "On second thought...I'm not coming with you guys"
-    kt "Eeeeh? Why?"
-    k "As I said it's already late. Also..."
+    show kurtangry2 at left
+    show jerubangry2 at center
+    show engelangry2 at right
+    k "It's already late. Also..."
     jump dont_go_with_them
 
 label dont_go_with_them:
+    show kurtangry2 at left
+    show jerubangry2 at center
+    show engelangry2 at right
     k "... I gotta go somewhere."
+    show engelsad at right
+    hide engelangry2 with None
+
     e "Where?"
     k "..."
+    show jerubsad at center
+    hide jerubangry2 with None
 
-    j "C'mon man at least one game ;;..."
+    j "C'mon man at least one game."
     k "I really can't man I'm just too tired and we still got that requirement to do ..."
+    show engelangry2 at right
+    hide engelsad with None
+
     e "Why? Don't you want to play with us?"
-    kt "I'll buy you the new Irelia skin hehe ^^."
+
     k "I really can't today. Maybe next time."
+    show engelnormal at right
+    hide engelangry2 with None
+
     e "I see."
-    kt "Looks like he doesn't want the new Irelia skin I suppose."
+    play sound "footsteps.mp3"
     "Kuro leaves the room"
+    play sound "classroomnoise.mp3" volume 0.2 loop
+    show engelsad at right
+    hide engelnormal with None
+
     e "He's been like that ever since he lost his friend."
+    show kurtsmirk at left
+    hide kurtangry2 with None
+
     kt "What was his name again?"
+    show jerubnormal at center
+    hide jerubsad with None
+
     j "Shiro"
+    show kurtangry2 at left
+    hide kurtsmirk with None
+
     kt "Oh yeah! I remember him hanging out with Kuro multiple times back then."
+    show engelsad at right
+
     e "I never knew they were that close."
+    show jerubnormal at center
+
     j "They were, similar, in many ways but at the same time they're quite the opposite of each other."
+    show kurtsad at left
+    hide kurtsmirk with None
+
     kt "You hanged out with them back then?"
-    j "Not really but ... I was there when Shiro died." ##make the dialogue smoother or smth
+    show jerubnormal at center
+
+    j "Not really but ... I was there when Shiro died."
+    show engelsad at right
+
     e "Damn."
+    show kurtsad at left
+
     kt "Sorry for asking."
-    j "It's fine."
+    show jerubnormal at center
+
     j "Let's just hope Kuro's okay."
+    show kurtnormal at left
+
     kt "Yeah."
+    show engelnormal at right
     e "Yeah."
 
     stop sound
